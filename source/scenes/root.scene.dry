@@ -15,7 +15,6 @@ go-to: start_menu_2
 - @credits: Credits
 - @game_over.achievements
 
-
 @start
 on-arrival: {!
 Q.started = 1;
