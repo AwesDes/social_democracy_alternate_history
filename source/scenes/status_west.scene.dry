@@ -18,14 +18,12 @@ if (Q.economic_growth) {
 
 [+ month : month +] [+ year +]
 
-Resources available: [+ resources +]
+Resources: [+ resources +]
 
-SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+SPD Position: [? if spd_toleration : Toleration ?][? if spd_in_government : In Government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : Opposition ?][? if spd_caretaker : Caretaker Government ?]
+[? if in_social_liberal_coalition and spd_in_government: Social Liberal Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_progressive_coalition and spd_in_government: Progressive Coalition ?][? if in_spd_majority and spd_in_government: SPD Majority ?][? if in_minority_government and spd_in_government: Minority Government ?][? if spd_in_government and in_compromise_coalition: Compromise Coalition ?]
 
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
-
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition Dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
@@ -35,29 +33,25 @@ President: [+ president +]
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
-Reichstag composition:
+Bundestag Composition:
 
-# 1928: 30, 1930: 25, 1932: 22
 {!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
-# 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="Center Party + Bavarian People's Party">Z + BVP</span>!}: [+ z_r +]%
-# 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_r +]%
-# 1928: 5, 1930: 4 (as DstP)
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
-# 1928: 9, 1930: 5
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_r +]%
-# 1928: 14, 1930: 7
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_r +]%
-# 1928: 3, 1930: 18
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_r +]%
-# 1928: 9, 1930: 10
+
+{!<span class="tooltip-text" title="Christian Democratic Union">CDU</span>!}: [+ cdu_r +]%
+
+{!<span class="tooltip-text" title="Christian Social Union">CSU</span>!}: [+ csu_r +]%
+
+{!<span class="tooltip-text" title="Free Democratic Party">FDP</span>!}: [+ fdp_r +]%
+
+{!<span class="tooltip-text" title="The Greens">Die Grünen</span>!}: [+ green_r +]%
+
 Others: [+ other_r +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 
-Next election: [+ next_election_month : month +] [+ next_election_year +]
+[? if election_called: Next election: [+ next_election_month : month +] [+ next_election_year +] ?]
+
+[? if not election_called: Next Election: Before January 1991 ?]
 
 = Economics
 
@@ -65,7 +59,7 @@ Inflation: [+ inflation_2 +]%
 
 [? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
 
-Economic growth: [+ economic_growth_2 +]%
+Economic Growth: [+ economic_growth_2 +]%
 
 
 
@@ -75,31 +69,23 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
+{!<span class="tooltip-text" title="Christian Democratic Union">CDU</span>!}: [+ cdu_relation : relationships +]
 
-{!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ z_relation : relationships +]
+{!<span class="tooltip-text" title="Christian Social Union">CSU</span>!}: [+ csu_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+{!<span class="tooltip-text" title="Free Democratic Party">FDP</span>!}: [+ fdp_relation : relationships +]
 
-{!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_relation : relationships +]
-
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_relation : relationships +]
-
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
-
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_relation : relationships +]
+{!<span class="tooltip-text" title="The Greens">Die Grünen</span>!}: [+ green_relation : relationships +]
 
 = Internal Factions of the SPD
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="The Modernisers, led by current Saarland Minister-President Oskar Lafontaine, are the closest faction to Green politics and the most socially progressive of the lot. The faction remains neutral on reunification, seeking a slower, more measured transition towards it rather than the swiftness of Brandt or Schmidt.">Modernisers</span>!} strength: [+ moderniser_strength : strength +], dissent: [+ moderniser_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="The Ostpolitikers, led by one Willy Brandt, remain supportive of reunification on equal terms rather than swift absorption. They regularly come into conflict with the Modernisers, though Brandt still remains the most popular West German in the East.">Ostpolitikers</span>!} strength: [+ ostpolitiker_strength : strength +], dissent: [+ ostpolitiker_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+{!<span class="tooltip-text" title="The DGB remains a key figure in party politics, and the SPD firmly remains the party of the unions. They seek to ensure reunification, no matter how it occurs, advances labour rights and protects workers, even East German ones.">Labour</span>!} strength: [+ labour_strength : strength +], dissent: [+ labour_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
-
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
-
+{!<span class="tooltip-text" title="The Atlanticists, led by Helmut Schmidt, still remain strong, yet still bruised and detached from the party's mainstream after the fall of Schmidt's government. They support a swift path to reunification with a reunified state in NATO.">Atlanticists</span>!} strength: [+ atlanticist_strength : strength +], dissent: [+ atlanticist_dissent : dissent +]
 
 @paramilitaries
 on-arrival: {!
@@ -149,9 +135,7 @@ Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 
 @polls
 on-arrival: {!
-Q.pro_republic_disp = Math.round(Q.pro_republic);
-Q.nationalism_disp = Math.round(Q.nationalism);
-Q.socialism_disp = Math.round(Q.socialism);
+Q.pro_unification_disp = Math.round(Q.pro_unification);
 !}
 
 = Projected election results
@@ -160,19 +144,11 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 SPD: [+ spd_votes +]%
 
-[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
+CDU: [+ cdu_votes +]%
 
-Z + BVP: [+ z_votes +]%
+CSU: [+ csu_votes +]%
 
-KPD: [+ kpd_votes +]%
-
-[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ ddp_votes +]%
-
-DVP: [+ dvp_votes +]%
-
-DNVP: [+ dnvp_votes +]%
-
-NSDAP: [+ nsdap_votes +]%
+Die Grünen: [+ green_votes +]%
 
 Others: [+ other_votes +]%
 
@@ -190,4 +166,4 @@ Unemployed: SPD: [+ unemployed_spd_display +]%, Z: [+ unemployed_z_display +]%, 
 
 Catholics: SPD: [+ catholics_spd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ catholics_ddp_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
-Support for the Republic: [+ pro_republic_disp +]%
+Support for Reunification: [+ pro_unification_disp +]%
