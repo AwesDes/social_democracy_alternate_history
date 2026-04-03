@@ -9,11 +9,11 @@ new-page: true
 
 Wissell is a labour economist working for the ADGB, the federation of free trade unions, and has been a labour minister on multiple occasions. His priority is to improve conditions for organized workers.
 
-- @labour_rights_
+- @labour_rights
 - @union_unity
 - @root: Return to main
 
-@labour_rights_
+@labour_rights
 title: Labour Rights
 subtitle: As Labour Minister, Wissell can help set regulations for working conditions.
 choose-if: advisor_action_timer <= 0 and spd_in_government and labour_minister_party = "SPD"
