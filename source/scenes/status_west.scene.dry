@@ -62,9 +62,6 @@ Inflation: [+ inflation_2 +]%
 Economic Growth: [+ economic_growth_2 +]%
 
 
-
-# = Public Opinion
-
 @politics
 
 = Inter-party Relations
@@ -79,13 +76,13 @@ Economic Growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the SPD
 
-{!<span class="tooltip-text" title="The Modernisers, led by current Saarland Minister-President Oskar Lafontaine, are the closest faction to Green politics and the most socially progressive of the lot. The faction remains neutral on reunification, seeking a slower, more measured transition towards it rather than the swiftness of Brandt or Schmidt.">Modernisers</span>!} strength: [+ moderniser_strength : strength +], dissent: [+ moderniser_dissent : dissent +]
+{!<span class="tooltip-text" title="The Modernisers, led by current Saarland Minister-President Oskar Lafontaine, are the closest faction to Green politics and the most socially progressive of the lot. The faction remains neutral on reunification, seeking a slower, more measured transition towards it rather than the swiftness of Brandt or Schmidt.">Modernisers</span>!} Strength: [+ moderniser_strength : strength +], Dissent: [+ moderniser_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Ostpolitikers, led by one Willy Brandt, remain supportive of reunification on equal terms rather than swift absorption. They regularly come into conflict with the Modernisers, though Brandt still remains the most popular West German in the East.">Ostpolitikers</span>!} strength: [+ ostpolitiker_strength : strength +], dissent: [+ ostpolitiker_dissent : dissent +]
+{!<span class="tooltip-text" title="The Ostpolitikers, led by one Willy Brandt, remain supportive of reunification on equal terms rather than swift absorption. They regularly come into conflict with the Modernisers, though Brandt still remains the most popular West German in the East.">Ostpolitikers</span>!} Strength: [+ ostpolitiker_strength : strength +], Dissent: [+ ostpolitiker_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The DGB remains a key figure in party politics, and the SPD firmly remains the party of the unions. They seek to ensure reunification, no matter how it occurs, advances labour rights and protects workers, even East German ones.">Labour</span>!} strength: [+ labour_strength : strength +], dissent: [+ labour_dissent : dissent +]
+{!<span class="tooltip-text" title="The DGB remains a key figure in party politics, and the SPD firmly remains the party of the unions. They seek to ensure reunification, no matter how it occurs, advances labour rights and protects workers, even East German ones.">Labour</span>!} Strength: [+ labour_strength : strength +], Dissent: [+ labour_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Atlanticists, led by Helmut Schmidt, still remain strong, yet still bruised and detached from the party's mainstream after the fall of Schmidt's government. They support a swift path to reunification with a reunified state in NATO.">Atlanticists</span>!} strength: [+ atlanticist_strength : strength +], dissent: [+ atlanticist_dissent : dissent +]
+{!<span class="tooltip-text" title="The Atlanticists, led by Helmut Schmidt, still remain strong, yet still bruised and detached from the party's mainstream after the fall of Schmidt's government. They support a swift path to reunification with a reunified state in NATO.">Atlanticists</span>!} Strength: [+ atlanticist_strength : strength +], Dissent: [+ atlanticist_dissent : dissent +]
 
 @paramilitaries
 on-arrival: {!
