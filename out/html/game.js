@@ -241,7 +241,7 @@
 
 
   window.justLoaded = true;
-  window.statusTab = "status";
+  window.statusTab = "status_west";
   window.dendryModifyUI = main;
   console.log("Modifying stats: see dendryUI.dendryEngine.state.qualities");
 
@@ -250,7 +250,7 @@
     if (window.dendryUI.dark_mode) {
         document.body.classList.add('dark-mode');
     }
-    window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
+    window.pinnedCardsDescription = "Advisor cards - actions are only usable once per month.";
   };
 
 }());

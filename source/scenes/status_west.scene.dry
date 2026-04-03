@@ -57,7 +57,7 @@ Others: [+ other_r +]%
 
 Inflation: [+ inflation_2 +]%
 
-[? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
+Unemployment: [+ unemployed_2 +]%
 
 Economic Growth: [+ economic_growth_2 +]%
 
@@ -83,6 +83,7 @@ Economic Growth: [+ economic_growth_2 +]%
 {!<span class="tooltip-text" title="The DGB remains a key figure in party politics, and the SPD firmly remains the party of the unions. They seek to ensure reunification, no matter how it occurs, advances labour rights and protects workers, even East German ones.">Labour</span>!} Strength: [+ labour_strength : strength +], Dissent: [+ labour_dissent : dissent +]
 
 {!<span class="tooltip-text" title="The Atlanticists, led by Helmut Schmidt, still remain strong, yet still bruised and detached from the party's mainstream after the fall of Schmidt's government. They support a swift path to reunification with a reunified state in NATO.">Atlanticists</span>!} Strength: [+ atlanticist_strength : strength +], Dissent: [+ atlanticist_dissent : dissent +]
+
 
 @paramilitaries
 on-arrival: {!
@@ -129,6 +130,7 @@ Prussian police: [+ prussian_police_strength +] thousand members.
 Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 
 [? if spd_in_government : Interior police loyalty: [+ interior_police_loyalty : loyalty +] ?]
+
 
 @polls
 on-arrival: {!
