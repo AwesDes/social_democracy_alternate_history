@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= Wiedervereinigung: An Alternate History
 
 @start_menu_2
 
@@ -507,13 +507,17 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
+> *“I find it difficult to say whether the leadership's 'second echelon' could have preserved the German Democratic Republic. Helmut Kohl later told me he had never believed that Egon Krenz was capable of getting the situation under control. I do not know — we are all wiser after the event, as the saying goes. For my part, I must admit I briefly had a faint hope that the new leaders would be able to change the course of events by establishing a new type of relations between the two German states — based on radical domestic reforms in East Germany.”*
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+ - Mikhail Gorbachev, *Memoirs*, 1995
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
-For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+For more information on the politics and of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+
+This is an **overhaul** mod for Autumn Chen's *Social Democracy: An Alternate History* mod, that you should check out <a href="https://red-autumn.itch.io/social-democracy" style="color: #900;">**here**</a> if you have not done so already.
+
+**If you are playing this mod via the Mod Loader in base game, there will be various items missing (Election Colours, Card Images, Status Bar, etc.). For the intended experience, please play using <a href="https://awesdes.github.io/social_democracy_alternate_history/" style="color: #66b2b2">this</a> link.**
 
 - @1989_mod: Begin (Mod Difficulty)
 - @1989_easy: Begin (Easy difficulty)

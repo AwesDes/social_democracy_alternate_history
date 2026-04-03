@@ -1,4 +1,6 @@
-# Social Democracy: An Alternate History
+# Wiedervereinigung: An Alternate History
+
+## Mod of Autumn Chen's [Social Democracy: An Alternate History](https://github.com/aucchen/social_democracy_alternate_history)
 
 ## Included Libraries
 
