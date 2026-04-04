@@ -21,7 +21,7 @@ if (Q.economic_growth) {
 Resources: [+ resources +]
 
 <span style="color: #E3000F;">**SPD**</span> Position: [? if spd_toleration : Toleration ?][? if spd_in_government : In Government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : Opposition ?][? if spd_caretaker : Caretaker Government ?]
-[? if in_social_liberal_coalition and spd_in_government: <span style="color: #E3000F;">Social</span>-<span style="color: #FFED00;">Liberal</span> Coalition ?][? if in_grand_coalition and spd_in_government: <span style="color: #E3000F;">Gr</span><span style="color: #000;">an</span><span style="color: #008AC5;">d</span> Coalition ?][? if in_progressive_coalition and spd_in_government: <span style="color: #E3000F;">Progr</span><span style="color: #409A3C;">essive</span> Coalition ?][? if in_spd_majority and spd_in_government: <span style="color: #E3000F;">SPD</span> Majority ?][? if in_minority_government and spd_in_government: Minority Government ?][? if spd_in_government and in_compromise_coalition: <span style="color: #FFED00;">Com</span><span style="color: #E3000F;">pro</span><span style="color: #409A3C;">mise</span> Coalition ?]
+[? if in_social_liberal_coalition and spd_in_government: <span style="color: #E3000F;">Social</span>-<span style="color: #FFED00; -webkit-text-stroke: 0.5px #999">Liberal</span> Coalition ?][? if in_grand_coalition and spd_in_government: <span style="color: #E3000F;">Gr</span><span style="color: #000;">an</span><span style="color: #008AC5;">d</span> Coalition ?][? if in_progressive_coalition and spd_in_government: <span style="color: #E3000F;">Progr</span><span style="color: #409A3C;">essive</span> Coalition ?][? if in_spd_majority and spd_in_government: <span style="color: #E3000F;">SPD</span> Majority ?][? if in_minority_government and spd_in_government: Minority Government ?][? if spd_in_government and in_compromise_coalition: <span style="color: #FFED00; -webkit-text-stroke: 0.5px #999">Com</span><span style="color: #E3000F;">pro</span><span style="color: #409A3C;">mise</span> Coalition ?]
 
 [? if spd_in_government and not in_spd_majority and not in_left_front : Coalition Dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
@@ -29,9 +29,9 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [? if president = "Weizsäcker" or president = "Herzog": <span style="color: #000;">[+ president +]</span> ?][? if president = "Rau": <span style="color: #E3000F;">[+ president +]</span> ?][? if president = "Hamm-Brücher": <span style="color: #FFED00;">[+ president +]</span> ?][? if president = "Reich": <span style="color: #409A3C;">[+ president +]</span> ?]
+President: [? if president = "Weizsäcker" or president = "Herzog": <span style="color: #000;">[+ president +]</span> ?][? if president = "Rau": <span style="color: #E3000F;">[+ president +]</span> ?][? if president = "Hamm-Brücher": <span style="color: #FFED00; -webkit-text-stroke: 0.5px #999">[+ president +]</span> ?][? if president = "Reich": <span style="color: #409A3C;">[+ president +]</span> ?]
 
-Chancellor: [? if chancellor_party = "SPD": <span style="color: #E3000F;">[+ chancellor +]</span> ?][? if chancellor_party = "CDU": <span style="color: #000;">[+ chancellor +]</span> ?][? if chancellor_party = "CSU": <span style="color: #008AC5;">[+ chancellor +]</span> ?][? if chancellor_party = "FDP": <span style="color: #FFED00;">[+ chancellor +]</span> ?][? if chancellor_party = "Die Grünen": <span style="color: #409A3C;">[+ chancellor +]</span> ?][? if chancellor_party = "I": <span style="color: #909090;">[+ chancellor +]</span> ?] ([+ chancellor_party +])
+Chancellor: [? if chancellor_party = "SPD": <span style="color: #E3000F;">[+ chancellor +]</span> ?][? if chancellor_party = "CDU": <span style="color: #000;">[+ chancellor +]</span> ?][? if chancellor_party = "CSU": <span style="color: #008AC5;">[+ chancellor +]</span> ?][? if chancellor_party = "FDP": <span style="color: #FFED00; -webkit-text-stroke: 0.5px #999">[+ chancellor +]</span> ?][? if chancellor_party = "Die Grünen": <span style="color: #409A3C;">[+ chancellor +]</span> ?][? if chancellor_party = "I": <span style="color: #909090;">[+ chancellor +]</span> ?] ([+ chancellor_party +])
 
 Bundestag Composition:
 
@@ -41,7 +41,7 @@ Bundestag Composition:
 
 {!<span class="tooltip-text" title="Christian Social Union"><span style="color: #008AC5;">CSU</span></span>!}: [+ csu_seats_disp +]%
 
-{!<span class="tooltip-text" title="Free Democratic Party"><span style="color: #FFED00;">FDP</span></span>!}: [+ fdp_seats_disp +]%
+{!<span class="tooltip-text" title="Free Democratic Party"><span style="color: #FFED00; -webkit-text-stroke: 0.5px #999">FDP</span></span>!}: [+ fdp_seats_disp +]%
 
 {!<span class="tooltip-text" title="The Greens"><span style="color: #409A3C;">Die Grünen</span></span>!}: [+ greens_seats_disp +]%
 
@@ -70,7 +70,7 @@ Economic Growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="Christian Social Union"><span style="color: #008AC5;">CSU</span></span>!}: [+ csu_relation : relationships +]
 
-{!<span class="tooltip-text" title="Free Democratic Party"><span style="color: #FFED00;">FDP</span></span>!}: [+ fdp_relation : relationships +]
+{!<span class="tooltip-text" title="Free Democratic Party"><span style="color: #FFED00; -webkit-text-stroke: 0.5px #999">FDP</span></span>!}: [+ fdp_relation : relationships +]
 
 {!<span class="tooltip-text" title="The Greens"><span style="color: #409A3C;">Die Grünen</span></span>!}: [+ greens_relation : relationships +]
 
@@ -127,28 +127,28 @@ Q.pro_unification_disp = Math.round(Q.pro_unification);
 
 (if the election were to be held now):
 
-SPD: [+ spd_votes +]%
+<span style="color: #E3000F;">SPD</span>: [+ spd_votes +]%
 
-CDU: [+ cdu_votes +]%
+<span style="color: #32302E;">CDU</span>: [+ cdu_votes +]%
 
-CSU: [+ csu_votes +]%
+<span style="color: #008AC5;">CSU</span>: [+ csu_votes +]%
 
-Die Grünen: [+ greens_votes +]%
+<span style="color: #FFED00; -webkit-text-stroke: 0.5px #999;">FDP</span>: [+ fdp_votes +]%
 
-Others: [+ other_votes +]%
+<span style="color: #409A3C;">Die Grünen</span>: [+ greens_votes +]%
+
+<span style="color: #8B1A1A;">Sonstige</span>: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Industrial Workforce: SPD: [+ workers_spd_display +]%, CDU: [+ workers_cdu_display +]%, CSU: [+ workers_csu_display +]%, FDP: [+ workers_fdp_display +]%, Greens: [+ workers_greens_display +]%, Others: [+ workers_other_display +]%
+Industrial Workforce: <span style="color: #E3000F;">SPD</span>: [+ workers_spd_display +]%, <span style="color: #32302E;">CDU</span>: [+ workers_cdu_display +]%, <span style="color: #008AC5;">CSU</span>: [+ workers_csu_display +]%, <span style="color: #FFED00; -webkit-text-stroke: 0.5px #999;">FDP</span>: [+ workers_fdp_display +]%, <span style="color: #409A3C;">Grünen</span>: [+ workers_greens_display +]%, <span style="color: #8B1A1A;">Sonstige</span>: [+ workers_other_display +]%
 
-Middle Class: SPD: [+ middle_class_spd_display +]%, CDU: [+ middle_class_cdu_display +]%, CSU: [+ middle_class_csu_display +]%, FDP: [+ middle_class_fdp_display +]%, Greens: [+ middle_class_greens_display +]%, Others: [+ middle_class_other_display +]%
+Middle Class: <span style="color: #E3000F;">SPD</span>: [+ middle_class_spd_display +]%, <span style="color: #32302E;">CDU</span>: [+ middle_class_cdu_display +]%, <span style="color: #008AC5;">CSU</span>: [+ middle_class_csu_display +]%, <span style="color: #FFED00; -webkit-text-stroke: 0.5px #999;">FDP</span>: [+ middle_class_fdp_display +]%, <span style="color: #409A3C;">Grünen</span>: [+ middle_class_greens_display +]%, <span style="color: #8B1A1A;">Sonstige</span>: [+ middle_class_other_display +]%
 
-Public Sector: SPD: [+ public_sector_spd_display +]%, CDU: [+ public_sector_cdu_display +]%, CSU: [+ public_sector_csu_display +]%, FDP: [+ public_sector_fdp_display +]%, Greens: [+ public_sector_greens_display +]%, Others: [+ public_sector_other_display +]%
+Public Sector: <span style="color: #E3000F;">SPD</span>: [+ public_sector_spd_display +]%, <span style="color: #32302E;">CDU</span>: [+ public_sector_cdu_display +]%, <span style="color: #008AC5;">CSU</span>: [+ public_sector_csu_display +]%, <span style="color: #FFED00; -webkit-text-stroke: 0.5px #999;">FDP</span>: [+ public_sector_fdp_display +]%, <span style="color: #409A3C;">Grünen</span>: [+ public_sector_greens_display +]%, <span style="color: #8B1A1A;">Sonstige</span>: [+ public_sector_other_display +]%
 
-Capitalists: SPD: [+ capitalists_spd_display +]%, CDU: [+ capitalists_cdu_display +]%, CSU: [+ capitalists_csu_display +]%, FDP: [+ capitalists_fdp_display +]%, Greens: [+ capitalists_greens_display +]%, Others: [+ capitalists_other_display +]%
+Capitalists: <span style="color: #E3000F;">SPD</span>: [+ capitalists_spd_display +]%, <span style="color: #32302E;">CDU</span>: [+ capitalists_cdu_display +]%, <span style="color: #008AC5;">CSU</span>: [+ capitalists_csu_display +]%, <span style="color: #FFED00; -webkit-text-stroke: 0.5px #999;">FDP</span>: [+ capitalists_fdp_display +]%, <span style="color: #409A3C;">Grünen</span>: [+ capitalists_greens_display +]%, <span style="color: #8B1A1A;">Sonstige</span>: [+ capitalists_other_display +]%
 
-Catholics: SPD: [+ catholics_spd_display +]%, CDU: [+ catholics_cdu_display +]%, CSU: [+ catholics_csu_display +]%, FDP: [+ catholics_fdp_display +]%, Greens: [+ catholics_greens_display +]%, Others: [+ catholics_other_display +]%
+Catholics: <span style="color: #E3000F;">SPD</span>: [+ catholics_spd_display +]%, <span style="color: #32302E;">CDU</span>: [+ catholics_cdu_display +]%, <span style="color: #008AC5;">CSU</span>: [+ catholics_csu_display +]%, <span style="color: #FFED00; -webkit-text-stroke: 0.5px #999;">FDP</span>: [+ catholics_fdp_display +]%, <span style="color: #409A3C;">Grünen</span>: [+ catholics_greens_display +]%, <span style="color: #8B1A1A;">Sonstige</span>: [+ catholics_other_display +]%
 
-Activists: SPD: [+ activists_spd_display +]%, CDU: [+ activists_cdu_display +]%, CSU: [+ activists_csu_display +]%, FDP: [+ activists_fdp_display +]%, Greens: [+ activists_greens_display +]%, Others: [+ activists_other_display +]%
-
-Support for Reunification: [+ pro_unification_disp +]%
+Activists: <span style="color: #E3000F;">SPD</span>: [+ activists_spd_display +]%, <span style="color: #32302E;">CDU</span>: [+ activists_cdu_display +]%, <span style="color: #008AC5;">CSU</span>: [+ activists_csu_display +]%, <span style="color: #FFED00; -webkit-text-stroke: 0.5px #999;">FDP</span>: [+ activists_fdp_display +]%, <span style="color: #409A3C;">Grünen</span>: [+ activists_greens_display +]%, <span style="color: #8B1A1A;">Sonstige</span>: [+ activists_other_display +]%

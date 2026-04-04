@@ -522,6 +522,7 @@ This is an **overhaul** mod for Autumn Chen's *Social Democracy: An Alternate Hi
 - @1989_historical: Begin (Historical mode)
 
 @1989_mod
+subtitle: The intended way to play the game.
 on-arrival: difficulty = -1; resources = 4; dues = 3; budget = 4;
 go-to: 1989_main
 
