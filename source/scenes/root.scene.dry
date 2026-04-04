@@ -247,17 +247,31 @@ Q.activists_other = 2;
 Q.spd_r = 37.0;
 Q.cdu_r = 34.5;
 Q.csu_r = 9.8;
-Q.greens_r = 8.3;
 Q.fdp_r = 9.1;
+Q.greens_r = 8.3;
 Q.other_r = 0.9;
 
 // diff from prev
 Q.old_spd_r = 38.2;
 Q.old_cdu_r = 38.2;
 Q.old_csu_r = 10.6;
-Q.old_greens_r = 5.6;
 Q.old_fdp_r = 7.0;
+Q.old_greens_r = 5.6;
 Q.old_other_r = 0.4;
+
+Q.spd_seats = 186;
+Q.cdu_seats = 174;
+Q.csu_seats = 49;
+Q.fdp_seats = 46;
+Q.greens_seats = 42;
+Q.other_seats = 0;
+
+Q.spd_seats_disp = 37.4;
+Q.cdu_seats_disp = 34.9;
+Q.csu_seats_disp = 9.9;
+Q.fdp_seats_disp = 9.3;
+Q.greens_seats_disp = 8.5;
+Q.other_seats_disp = 0.0;
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -486,7 +500,7 @@ Q.hirschfeld_advisor = 0; // Magnus Hirschfeld
 Q.radbruch_advisor = 0; // Gustav Radbruch
 Q.stampfer_advisor = 0; // Friedrich Stampfer
 !}
-set-bg: img/map_2.jpg
+set-bg: img/bg.jpg
 new-page: true
 
 > *“I find it difficult to say whether the leadership's 'second echelon' could have preserved the German Democratic Republic. Helmut Kohl later told me he had never believed that Egon Krenz was capable of getting the situation under control. I do not know — we are all wiser after the event, as the saying goes. For my part, I must admit I briefly had a faint hope that the new leaders would be able to change the course of events by establishing a new type of relations between the two German states — based on radical domestic reforms in East Germany.”*

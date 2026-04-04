@@ -15,7 +15,7 @@ Herein contains relevant information about the government and politics of the Ge
 - @demographics: Demographics
 - @parties: Parties
 - @public_opinion: Public opinion (and projected election results)
-- @paramilitaries: Paramilitary groups
+- @economy: Economy
 - @factions: Internal factions
 - @figures: Figures and charts
 - @backSpecialScene: Exit library.
@@ -189,12 +189,7 @@ Current relations: [+ greens_relation : relationships +]
 **Other parties** - There are a multitude of other minor parties, from far-right parties like the National Democratic Party of Germany to communist parties like the Marxist-Leninist Party of Germany, though they rarely get a single seat in the Bundestag.
 
 
-@paramilitaries
-on-arrival: {!
-Q.rb_strength = Math.round(Q.rb_strength);
-Q.sh_strength = Math.round(Q.sh_strength);
-Q.sa_strength = Math.round(Q.sa_strength); 
-!}
+@economy
 go-to: menu
 
 **Paramilitary groups:**
@@ -281,61 +276,42 @@ on-arrival: z_minus_bvp_r = z_r - 3;
 on-display: {!
 data = [
     {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "KPD",
-        "seats": Q.kpd_r*5,
-    }];
-data = data.concat([
+        "id": "greens",
+        "legend": "Die Grünen",
+        "name": "Die Grünen",
+        "seats": Q.greens_seats,
+    },
     {
         "id": "spd",
         "legend": "SPD",
         "name": "SPD",
-        "seats": Q.spd_r*5,
+        "seats": Q.spd_seats,
     },
     {
-        "id": "ddp",
-        "legend": "DDP",
-        "name": "DDP",
-        "seats": Q.ddp_r*5,
+        "id": "fdp",
+        "legend": "FDP",
+        "name": "FDP",
+        "seats": Q.fdp_seats,
     },
     {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
-        "seats": (Q.z_r - 3)*5,
+        "id": "cdu",
+        "legend": "CDU",
+        "name": "CDU",
+        "seats": Q.cdu_seats,
     },
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
-        "seats": 3*5,
-    },
-    {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Q.dvp_r*5,
+        "id": "csu",
+        "legend": "CSU",
+        "name": "CSU",
+        "seats": Q.csu_seats,
     },
     {
         "id": "other",
         "legend": "Other",
         "name": "Other",
-        "seats": Q.other_r*5,
+        "seats": Q.other_seats,
     },
-    {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "DNVP",
-        "seats": Q.dnvp_r*5,
-    },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
-        "seats": Q.nsdap_r*5,
-    },
-]);
+];
 if (d3 && window) {
     // get screen width
     var width = 500;

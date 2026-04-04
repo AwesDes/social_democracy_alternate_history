@@ -35,17 +35,17 @@ Chancellor: [? if chancellor_party = "SPD": <span style="color: #E3000F;">[+ cha
 
 Bundestag Composition:
 
-{!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_r +]%
+{!<span class="tooltip-text" title="Social Democratic Party of Germany"><span style="color: #E3000F;">SPD</span></span>!}: [+ spd_seats_disp +]%
 
-{!<span class="tooltip-text" title="Christian Democratic Union">CDU</span>!}: [+ cdu_r +]%
+{!<span class="tooltip-text" title="Christian Democratic Union"><span style="color: #000;">CDU</span></span>!}: [+ cdu_seats_disp +]%
 
-{!<span class="tooltip-text" title="Christian Social Union">CSU</span>!}: [+ csu_r +]%
+{!<span class="tooltip-text" title="Christian Social Union"><span style="color: #008AC5;">CSU</span></span>!}: [+ csu_seats_disp +]%
 
-{!<span class="tooltip-text" title="Free Democratic Party">FDP</span>!}: [+ fdp_r +]%
+{!<span class="tooltip-text" title="Free Democratic Party"><span style="color: #FFED00;">FDP</span></span>!}: [+ fdp_seats_disp +]%
 
-{!<span class="tooltip-text" title="The Greens">Die Grünen</span>!}: [+ greens_r +]%
+{!<span class="tooltip-text" title="The Greens"><span style="color: #409A3C;">Die Grünen</span></span>!}: [+ greens_seats_disp +]%
 
-Others: [+ other_r +]%
+Others: [+ other_seats_disp +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 
@@ -66,42 +66,28 @@ Economic Growth: [+ economic_growth_2 +]%
 
 = Inter-party Relations
 
-{!<span class="tooltip-text" title="Christian Democratic Union">CDU</span>!}: [+ cdu_relation : relationships +]
+{!<span class="tooltip-text" title="Christian Democratic Union"><span style="color: #000;">CDU</span></span>!}: [+ cdu_relation : relationships +]
 
-{!<span class="tooltip-text" title="Christian Social Union">CSU</span>!}: [+ csu_relation : relationships +]
+{!<span class="tooltip-text" title="Christian Social Union"><span style="color: #008AC5;">CSU</span></span>!}: [+ csu_relation : relationships +]
 
-{!<span class="tooltip-text" title="Free Democratic Party">FDP</span>!}: [+ fdp_relation : relationships +]
+{!<span class="tooltip-text" title="Free Democratic Party"><span style="color: #FFED00;">FDP</span></span>!}: [+ fdp_relation : relationships +]
 
-{!<span class="tooltip-text" title="The Greens">Die Grünen</span>!}: [+ greens_relation : relationships +]
+{!<span class="tooltip-text" title="The Greens"><span style="color: #409A3C;">Die Grünen</span></span>!}: [+ greens_relation : relationships +]
 
 = Internal Factions of the SPD
 
-{!<span class="tooltip-text" title="The Modernisers, led by current Saarland Minister-President Oskar Lafontaine, are the closest faction to Green politics and the most socially progressive of the lot. The faction remains neutral on reunification, seeking a slower, more measured transition towards it rather than the swiftness of Brandt or Schmidt.">Modernisers</span>!} Strength: [+ moderniser_strength : strength +], Dissent: [+ moderniser_dissent : dissent +]
+{!<span class="tooltip-text" title="The Modernisers are neutral on reunification, preferring a slower transition and reunification to prevent unmitigated consequences.">Modernisers</span>!} Strength: [+ moderniser_strength : strength +], Dissent: [+ moderniser_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Ostpolitikers, led by one Willy Brandt, remain supportive of reunification on equal terms rather than swift absorption. They regularly come into conflict with the Modernisers, though Brandt still remains the most popular West German in the East.">Ostpolitikers</span>!} Strength: [+ ostpolitiker_strength : strength +], Dissent: [+ ostpolitiker_dissent : dissent +]
+{!<span class="tooltip-text" title="The Ostpolitikers push for a swift reunificaton on equal grounds, rather than the absorption of one over another and are the most friendly towards the East.">Ostpolitikers</span>!} Strength: [+ ostpolitiker_strength : strength +], Dissent: [+ ostpolitiker_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The DGB remains a key figure in party politics, and the SPD firmly remains the party of the unions. They seek to ensure reunification, no matter how it occurs, advances labour rights and protects workers, even East German ones.">Labour</span>!} Strength: [+ labour_strength : strength +], Dissent: [+ labour_dissent : dissent +]
+{!<span class="tooltip-text" title="Labour seeks to advance worker rights and protect workers, no matter how reunification goes.">Labour</span>!} Strength: [+ labour_strength : strength +], Dissent: [+ labour_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Atlanticists, led by Helmut Schmidt, still remain strong, yet still bruised and detached from the party's mainstream after the fall of Schmidt's government. They support a swift path to reunification with a reunified state in NATO.">Atlanticists</span>!} Strength: [+ atlanticist_strength : strength +], Dissent: [+ atlanticist_dissent : dissent +]
+{!<span class="tooltip-text" title="The Atlanticists advocate for a reunified Germany that remains in NATO and is fully aligned with the West.">Atlanticists</span>!} Strength: [+ atlanticist_strength : strength +], Dissent: [+ atlanticist_dissent : dissent +]
 
 
-@paramilitaries
-on-arrival: {!
-if (Q.rb_strength) {
-    Q.rb_strength_2 = Q.rb_strength.toFixed(1);
-}
-if (Q.rfb_strength) {
-    Q.rfb_strength_2 = Q.rfb_strength.toFixed(1);
-}
-if (Q.sh_strength) {
-    Q.sh_strength_2 = Q.sh_strength.toFixed(1);
-}
-if (Q.sa_strength) {
-    Q.sa_strength_2 = Q.sa_strength.toFixed(1);
-}
-!}
+@economy
 
-= Paramilitaries
+= Economy
 
 {!<span class="tooltip-text" title="The Reichsbanner Schwarz-Rot-Gold is a popular organization for defending democracy, mostly affiliated with the SPD.">Reichsbanner</span>!} Strength: [+ rb_strength_2 +] thousand
 
