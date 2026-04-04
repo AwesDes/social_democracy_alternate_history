@@ -25,11 +25,11 @@
       ui.loadGame(url);
   };
 
-  window.showStats = function() {
-    if (window.dendryUI.dendryEngine.state.sceneId.startsWith('library')) {
+  window.showStats_West = function() {
+    if (window.dendryUI.dendryEngine.state.sceneId.startsWith('library_west')) {
         window.dendryUI.dendryEngine.goToScene('backSpecialScene');
     } else {
-        window.dendryUI.dendryEngine.goToScene('library');
+        window.dendryUI.dendryEngine.goToScene('library_west');
     }
   };
 

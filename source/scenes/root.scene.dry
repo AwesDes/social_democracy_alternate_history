@@ -98,12 +98,12 @@ Q.moderate_plan_adopted = 0;
 Q.cdu_relation = 50;
 Q.csu_relation = 25;
 Q.fdp_relation = 60;
-Q.green_relation = 35;
+Q.greens_relation = 35;
 
 Q.cdu_leader = "Kohl";
 Q.csu_leader = "Waigel";
 Q.fdp_leader = "Lambsdorff";
-Q.green_party_leader = "Multiple";
+Q.greens_party_leader = "Multiple";
 
 Q.kohl_relation = 25;
 Q.kohl_aggression = 0;
@@ -166,16 +166,12 @@ Q.capital_strike_progress = 0;
 
 Q.budget = 4;
 
-// Proportion of different social groups
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
-Q.workers = 48; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
-// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
-Q.catholics = 30;
+Q.workers = 22;
+Q.middle_class = 24;
+Q.public_sector = 14;
+Q.capitalists = 10;
+Q.catholics = 16;
+Q.activists = 10;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
 
@@ -199,73 +195,59 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'middle_class', 'public_sector', 'capitalists', 'catholics', 'activists'];
 Q.parties = ['spd', 'cdu', 'csu', 'fdp', 'greens', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
-Q.workers_ddp = 0;
-Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
-Q.workers_nsdap = 0;
-Q.workers_other = 10;
+Q.workers_spd = 52;
+Q.workers_cdu = 27;
+Q.workers_csu = 8;
+Q.workers_fdp = 5;
+Q.workers_greens = 6;
+Q.workers_other = 2;
 
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
-Q.old_middle_other = 10;
+Q.middle_class_spd = 35;
+Q.middle_class_cdu = 31;
+Q.middle_class_csu = 9;
+Q.middle_class_fdp = 14;
+Q.middle_class_greens = 9;
+Q.middle_class_other = 2;
 
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 1;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
+Q.public_sector_spd = 48;
+Q.public_sector_cdu = 25;
+Q.public_sector_csu = 6;
+Q.public_sector_fdp = 9;
+Q.public_sector_greens = 10;
+Q.public_sector_other = 2;
 
-Q.rural_spd = 10;
-Q.rural_kpd = 0;
-Q.rural_z = 5;
-Q.rural_ddp= 5;
-Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
-Q.rural_nsdap = 5;
-Q.rural_other = 10;
+Q.capitalists_spd = 10;
+Q.capitalists_cdu = 42;
+Q.capitalists_csu = 12;
+Q.capitalists_fdp = 30;
+Q.capitalists_greens = 4;
+Q.capitalists_other = 2;
 
-Q.unemployed_spd = 25;
-Q.unemployed_kpd = 55;
-Q.unemployed_z = 1;
-Q.unemployed_ddp = 0;
-Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
-Q.unemployed_nsdap = 15;
-Q.unemployed_other = 9;
+Q.catholics_spd = 22;
+Q.catholics_cdu = 44;
+Q.catholics_csu = 22;
+Q.catholics_fdp = 8;
+Q.catholics_greens = 3;
+Q.catholics_other = 1;
 
-Q.catholics_spd = 15;
-Q.catholics_kpd = 2;
-Q.catholics_z = 50;
-Q.catholics_ddp = 0;
-Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
-Q.catholics_nsdap = 0;
-Q.catholics_other = 12;
+Q.activists_spd = 38;
+Q.activists_cdu = 8;
+Q.activists_csu = 2;
+Q.activists_fdp = 10;
+Q.activists_greens = 40;
+Q.activists_other = 2;
 
-
-// Current Reichstag composition
-// % of Reichstag in Jan 1928
+// Current Bundestag composition
 
 Q.spd_r = 37.0;
 Q.cdu_r = 34.5;
 Q.csu_r = 9.8;
-Q.green_r = 8.7;
+Q.greens_r = 8.7;
 Q.fdp_r = 9.1;
 Q.other_r = 0.9;
 
@@ -273,7 +255,7 @@ Q.other_r = 0.9;
 Q.old_spd_r = 38.2;
 Q.old_cdu_r = 38.2;
 Q.old_csu_r = 10.6;
-Q.old_green_r = 5.6;
+Q.old_greens_r = 5.6;
 Q.old_fdp_r = 7.0;
 Q.old_other_r = 0.4;
 
