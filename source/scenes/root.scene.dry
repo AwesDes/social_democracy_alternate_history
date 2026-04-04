@@ -247,7 +247,7 @@ Q.activists_other = 2;
 Q.spd_r = 37.0;
 Q.cdu_r = 34.5;
 Q.csu_r = 9.8;
-Q.greens_r = 8.7;
+Q.greens_r = 8.3;
 Q.fdp_r = 9.1;
 Q.other_r = 0.9;
 

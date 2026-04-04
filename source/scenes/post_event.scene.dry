@@ -12,15 +12,13 @@ for (var c of Q.classes) {
     }
 }
 
-Q.pro_republic = Math.round(Q.pro_republic);
-Q.nationalism = Math.round(Q.nationalism);
-Q.socialism = Math.round(Q.socialism);
+Q.pro_unification = Math.round(Q.pro_unification);
 
-if (Q.pro_republic < 0) {
-    Q.pro_republic = 0;
+if (Q.pro_unification < 0) {
+    Q.pro_unification = 0;
 }
-if (Q.pro_republic >= 100) {
-    Q.pro_republic = 99;
+if (Q.pro_unification >= 100) {
+    Q.pro_unification = 99;
 }
 // re-calculate party support
 // calculate normalized class voting for the achievements
@@ -34,7 +32,7 @@ for (var c of Q.classes) {
     }
     for (var party of Q.parties) {
         Q[c + '_' + party + '_normalized'] = 100*Q[c+'_'+party]/class_votes;
-        Q[c + '_' + party + '_display'] = Math.round(100*Q[c+'_'+party]/class_votes);
+        Q[c + '_' + party + '_display'] = Math.round((100*Q[c+'_'+party]/class_votes) * 10) / 10;
     }
 }
 // calculate support for each of the parties
@@ -54,8 +52,8 @@ for (var party of Q.parties) {
 // 2. normalize support (fraction)
 for (var party of Q.parties) {
     Q[party+'_normalized'] = Q[party + '_support']/total_support;
-    Q[party+'_votes'] = Math.round(Q[party+'_normalized']*100);
-    Q[party+'_votes_display'] = Math.round(Q[party+'_normalized']*100);
+    Q[party+'_votes'] = Math.round((Q[party+'_normalized']*100) * 10) / 10;
+    Q[party+'_votes_display'] = Math.round((Q[party+'_normalized']*100) * 10) / 10;
 }
 
 
@@ -76,16 +74,15 @@ if (Q.unemployed <= 1) {
 }
 
 // re-calculate dissent.
-var total_strength = Q.left_strength + Q.center_strength + Q.labour_strength + Q.reformist_strength + Q.neorevisionist_strength;
+var total_strength = Q.moderniser_strength + Q.ostpolitiker_strength + Q.labour_strength + Q.atlanticist_strength
 
 // normalize strength for the different factions
-Q.left_strength = 100*Q.left_strength/total_strength;
-Q.center_strength = 100*Q.center_strength/total_strength;
+Q.moderniser_strength = 100*Q.moderniser_strength/total_strength;
+Q.ostpolitiker_strength = 100*Q.ostpolitiker_strength/total_strength;
 Q.labour_strength = 100*Q.labour_strength/total_strength;
-Q.reformist_strength = 100*Q.reformist_strength/total_strength;
-Q.neorevisionist_strength = 100*Q.neorevisionist_strength/total_strength;
+Q.atlanticist_strength = 100*Q.atlanticist_strength/total_strength;
 
-var total_dissent = Q.left_strength*Q.left_dissent + Q.center_strength*Q.center_dissent + Q.labour_strength*Q.labour_dissent + Q.reformist_strength*Q.reformist_dissent + Q.neorevisionist_strength*Q.neorevisionist_dissent;
+var total_dissent = Q.moderniser_strength*Q.moderniser_dissent + Q.ostpolitiker_strength*Q.ostpolitiker_dissent + Q.labour_strength*Q.labour_dissent + Q.atlanticist_strength*Q.atlanticist_dissent
 
 
 Q.dissent = 0.01*total_dissent/total_strength;

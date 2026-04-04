@@ -241,37 +241,37 @@ go-to: menu
 
 Overall dissent: [+ dissent_percent : dissent +]
 
-**Left**
+**Modernisers**
 
-Many leftists are former members of the USPD (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the KPD, and some support extraparliamentary action.
+The Modernisers, led by current Saarland Minister-President Oskar Lafontaine, are the closest faction to Green politics and the most socially progressive of the lot. The faction remains neutral on reunification, seeking a slower, more measured transition towards it rather than the swiftness of Brandt or Schmidt.
 
-Strength: [+ left_strength : strength +]
+Strength: [+ moderniser_strength : strength +]
 
-Dissent: [+ left_dissent : dissent +]
+Dissent: [+ moderniser_dissent : dissent +]
 
-**Centrists**
+**Ostpolitikers**
 
-Centrists in the SPD are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Rudolf Hilferding. They seek a middle course between reform and revolution, while defending the democratic state.
+The Ostpolitikers, led by one Willy Brandt, remain supportive of reunification on equal terms rather than swift absorption. They regularly come into conflict with the Modernisers, though Brandt still remains the most popular West German in the East.
 
-Strength: [+ center_strength : strength +]
+Strength: [+ ostpolitiker_strength : strength +]
 
-Dissent: [+ center_dissent : dissent +]
+Dissent: [+ ostpolitiker_dissent : dissent +]
 
 **Labour**
 
-Many SPD members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
+The DGB remains a key figure in party politics, and the SPD firmly remains the party of the unions. They seek to ensure reunification, no matter how it occurs, advances labour rights and protects workers, even East German ones.
 
 Strength: [+ labour_strength : strength +]
 
 Dissent: [+ labour_dissent : dissent +]
 
-**Reformists**
+**Atlanticists**
 
-Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if spd_prussia : They are dominant in the state government of Prussia. ?]
+The Atlanticists, led by Helmut Schmidt, still remain strong, yet still bruised and detached from the party's mainstream after the fall of Schmidt's government. They support a swift path to reunification with a reunified state in NATO.
 
-Strength: [+ reformist_strength : strength +]
+Strength: [+ atlanticist_strength : strength +]
 
-Dissent: [+ reformist_dissent : dissent +]
+Dissent: [+ atlanticist_dissent : dissent +]
 
 
 @figures
