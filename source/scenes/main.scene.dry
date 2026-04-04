@@ -16,13 +16,17 @@ max-cards: 3
 
 = [+ month : month +] [+ year +]
 
+[? if year = 1989 and month = 10 : It is a hopeful time for German democracy. After years in opposition, the winds seem to be shifting. The CDU-led government of Helmut Kohl has grown complacent, its promises to the working people of the Federal Republic increasingly ring hollow as the economy prospers, but not equally. To the east, Gorbachev's reforms are shaking the bloc to its foundations. Right across the border, in the DDR, something stirs. ?]
+
+[? if year = 1989 and month = 10 : Now, the task of Social Democracy is to prepare for the next election, or for the developments to the East. Perhaps the next government will bring in a social democratic government. ?]
+
 - @party
 - @govt
 - #advisor
 - @shuffle_leadership_pinned
 
 @main_easy
-set-bg: img/map_2.jpg
+set-bg: img/bg.jpg
 is-hand: true
 on-arrival: {!
 if (Q.advisor_action_timer <= 0) {
@@ -38,6 +42,10 @@ max-cards: 4
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
 = [+ month : month +] [+ year +]
+
+[? if year = 1989 and month = 10 : It is a hopeful time for German democracy. After years in opposition, the winds seem to be shifting. The CDU-led government of Helmut Kohl has grown complacent, its promises to the working people of the Federal Republic increasingly ring hollow as the economy prospers, but not equally. To the east, Gorbachev's reforms are shaking the bloc to its foundations. Right across the border, in the DDR, something stirs. ?]
+
+[? if year = 1989 and month = 10 : Now, the task of Social Democracy is to prepare for the next election, or for the developments to the East. Perhaps the next government will bring in a social democratic government. ?]
 
 - @party
 - @govt
